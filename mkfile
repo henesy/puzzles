@@ -1,6 +1,8 @@
 APE=/sys/src/ape
 <$APE/config
 
+CFLAGS = $CFLAGS -DSTANDALONE_SOLVER
+
 HFILES=\
 	grid.h\
 	latin.h\
@@ -15,7 +17,11 @@ TARG=\
 	fifteen\
 
 OFILES=\
-	malloc.$O\
 	plan9.$O\
+	malloc.$O\
+	random.$O\
+	drawing.$O\
+	misc.$O\
+	midend.$O\
 
 </sys/src/cmd/mkmany
